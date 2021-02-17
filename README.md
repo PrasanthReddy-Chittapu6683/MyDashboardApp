@@ -1,6 +1,11 @@
-# Getting Started with Create React App
+# My Dashboard Screen
+## Thirdparty plugins
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- npm install @material-ui
+- npm install @material-ui/icons
+- npm i recharts
+- npm i d3-scale
+- npm i d3-scale-chromatic
 
 ## Available Scripts
 

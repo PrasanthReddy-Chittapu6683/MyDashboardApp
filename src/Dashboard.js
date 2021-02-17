@@ -24,20 +24,17 @@ import Header from './Header';
 import Sidebar from './Sidebar';
 import AssessmentIcon from '@material-ui/icons/Assessment';
 import Content from './Content';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import WebAssetIcon from '@material-ui/icons/WebAsset';
+import WebIcon from '@material-ui/icons/Web';
 // import Chart from './Chart';
 // import Deposits from './Deposits';
 // import Orders from './Orders';
 
 function Copyright() {
     return (
-        <Typography variant="body2" color="textSecondary" align="center">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Your Website
-      </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-        </Typography>
+        <></>
     );
 }
 
@@ -127,6 +124,25 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         alignContent: 'center'
     },
+    footerStyles: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: 'gray',
+        fontSize: '1rem'
+    },
+    footerLinks: {
+        padding: '10px',
+        fontSize: '1rem',
+        justifyContent: 'center',
+        alignItems: 'center',
+        display: 'flex',
+        paddingTop: '6px'
+    },
+    footerIcons: {
+        padding: '2px',
+        marginTop: '2px',
+    }
 }));
 
 function Dashboard() {
@@ -195,10 +211,56 @@ function Dashboard() {
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
                 <Content classes={classes} />
+                <Box pt={4}>
+                    {/* <Copyright /> */}
+                    <div className={classes.footerStyles}>
+                        {'Developer © '}
+                        <Link color="inherit" href="https://cvpkr-portfolio.web.app/">
+                            Prasanth CV
+                        </Link>   
+                        {'   '}
+                        <div className={classes.footerLinks}>
+
+                            {' @ Follow Me '}
+                            {'  '}
+                            <Link title='GitHub' color="primary" href='https://github.com/PrasanthReddy-Chittapu6683/'>
+                                <GitHubIcon className={classes.footerIcons} /> {'  '}
+                            </Link>
+                            <Link  title='LinkedIn' color="primary" href='https://www.linkedin.com/in/prasanth-kumar-reddy-cv-385768b5/'>
+
+                                <LinkedInIcon className={classes.footerIcons} /> {'  '}
+                            </Link>
+                            <Link title='Xing' color="primary"  href='https://www.xing.com/profile/PrasanthKumarReddy_CV'>
+                           
+                                <WebAssetIcon className={classes.footerIcons} />
+                            </Link>
+                             <Link title='My Portfolio' color="primary" href='https://cvpkr-portfolio.web.app/'>
+                           
+                                <WebIcon  className={classes.footerIcons} />
+                            </Link>
+                        </div>
+                    </div>
+                    {/* <Typography variant="body2" color="textSecondary" align='center'   >
+                        {'Developer © '}
+                        <Link color="inherit" href="https://cvpkr-portfolio.web.app/">
+                            Prasanth CV
+                        </Link>
+                        {' | '}
+
+                        <Typography variant="body3" color="textSecondary" align='center'   >
+
+                           
+                                {' @ Follow Me '}
+                                {'  '}
+                                <GitHubIcon /> {'  '}
+                                <GitHubIcon /> {'  '}
+                                <GitHubIcon />
+                            
+                        </Typography>
+                    </Typography> */}
+                </Box>
             </main>
-            <AppBar   pt={4}>
-                <Copyright />
-            </AppBar>
+
         </div>
     );
 }
