@@ -214,9 +214,9 @@ function Dashboard() {
                 <Box pt={4}>
                     {/* <Copyright /> */}
                     <div className={classes.footerStyles}>
-                        {'Developer © '}
-                        <Link color="inherit" href="https://cvpkr-portfolio.web.app/">
-                            Prasanth CV
+                        {'Copyrights   ©    '}
+                        <Link color="primary" href="https://cvpkr-portfolio.web.app/">
+                           {' '} Prasanth CV
                         </Link>   
                         {'   '}
                         <div className={classes.footerLinks}>
